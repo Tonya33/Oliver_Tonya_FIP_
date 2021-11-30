@@ -1,0 +1,513 @@
+/*
+Style Name: HTML Atributes & Forms 
+Description: Class File
+Author: Tonya Oliver 
+Version: 1.0
+Tags: Learning HTML
+*/
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* ___________________________________________
+
+       CSS Guide
+___________________________________________ */
+
+/* 01. General Styles
+       - Reset
+       - Global
+         - General
+         - Floats
+         - Brand Colors
+         - Font Awesome                       
+   02. CSS Grid
+   03. Site Header
+       - Header
+       - Nav
+   04. Hero
+       - Image
+       - Title
+   05. Floats                       
+/* _____________________________________ */
+
+
+/*_______________________________________
+
+   01. General Styles
+   _____________________________________ */
+
+/*-----------------
+    Reset
+--------------------*/
+
+   body{
+    margin: 0;
+    padding: 0;
+    color: #4d4d4d;
+ }
+
+ h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+ }
+
+/*------------------
+Global
+------------------*/
+
+    /*-----------Start General--------*/
+
+   .hidden {
+        display: none;
+    }
+
+    .border-bottom {
+        border-bottom: 2px solid #21759b;
+        margin-bottom: 4em;
+        width: 100%;
+    }
+
+    .margin-top {
+        margin-top: 1em;
+    }
+
+    .margin-toptb {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .title {
+            display: grid;
+            grid-column: 1 / span 4;
+            grid-template-columns: 1fr;
+         }
+
+    /*---------------End General --------*/
+
+    /*------------- Floats -------------*/
+
+    .f-left {
+        float: left;
+     }
+    
+     .f-right {
+        float: right;
+     }
+  
+     .margin-left {
+        margin-left: 6em;
+     }
+     .margin-top {
+        margin-bottom: 5em;
+     }
+
+
+    /*------------End Floats -----------*/
+    /*----------- Brand Colours -------*/
+
+    .rs-blue {
+        color: #9dd0d1;
+    }
+    .rs-pink {
+        color: #ba9bc9;
+    }
+    .rs-grey {
+        color: #808080;
+    }
+
+    /*------------End Brand Colours-----*/
+
+    /*--------- Font Awesome ---------*/
+
+/*______________________________
+
+02. CSS Grid
+
+______________________________*/
+
+@supports (grid-area: auto){
+
+    .site{
+         max-width: none;
+    }
+
+    /*------Grid Items---------------*/
+    
+    .head, .main > *, .foot > *{
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+   }
+
+  /* .one-item {
+    display: inline-block;
+    
+ }*/
+ /*.one-item {
+    display: inline-block;
+    max-height: fit-content;
+    grid-column: 4 / span 1;
+    grid-template-columns: 1fr;
+    margin-left: ;*/
+    .one-item {
+        display: grid;
+        grid-column: 2 / span 2;
+        grid-template-columns: 1fr;
+     }
+
+    
+
+ .two-items {
+    display: grid;
+    max-height: fit-content;
+    grid-column: 2 / span 2;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content:space-evenly;
+    padding-top: 2em;
+    padding-bottom: 2em;
+ }
+
+ .three-items {
+    display: grid;
+    grid-column: 2 / span 2;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    row-gap: 2em;
+    column-gap: 2em;
+ }
+
+ .four-items {
+    display: grid;
+    grid-column: 1 / span 4;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-evenly;
+    margin-left: 4em;
+ }
+
+ .contact-override {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+    grid-column: 1/ span 4;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+}
+
+    /*--------end grid items---------*/
+
+/*____________________________________
+
+    03. Site Header
+    ________________________________*/
+
+    header {
+        position: sticky;
+        top: 0em;
+        background-color: #fff;
+        border-bottom: 1px solid #e6e6e6;
+        box-shadow: 0px 5px 8px #888;
+    }
+
+    .logo {
+        grid-column: 1 / span 1;
+    }
+
+    .logo img {
+        padding: 1em;
+        width: 100%;
+    }
+    /*------Start Nav Styling ---------*/
+
+    .nav {
+        grid-column: 2 / span 3;
+        padding-top: 1.5em;
+        margin: 0;
+     }
+    nav ul {
+        margin: 0;
+        padding: 2em;
+        text-decoration: none;
+        text-align: end;
+        color: #ba9bc9;
+        font-size: 1.5em;
+    }
+
+nav li {
+    display: inline;
+    margin-right: 4em;
+}
+nav li:last-child{
+    margin-right: 0em;
+}
+nav li a {
+    color:#4d4d4d;
+    font-size: 1em;
+    text-decoration: underline #4d4d4d;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+nav li a:hover {
+    border-bottom: 3px solid #ba9bc9;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+    
+}
+
+/*nav li a.active {
+    padding-bottom: .5em;
+    border-bottom: 3px solid #ba9bc9;
+} ------*/
+
+  /*-------- End Site header--------*/
+  
+/*_________________________________
+
+    04. Hero
+
+__________________________________*/
+
+.hero {
+    margin: 0 0;
+ }
+ 
+ .hero-img {
+    width: 100%;
+    display: grid;
+    grid-column: 1 / span 4;
+    grid-template-columns: repeat(4, 1fr);
+
+ }
+
+ /*------.hero-img {
+    display: grid;
+    grid-column: 1/ span 4;
+    margin-bottom: 1em;
+ }
+ 
+ .hero-img > * {
+    grid-column: 1;
+    grid-row: 1
+ }-----*/
+ 
+    /*--------Title Styles---------*/
+
+h2 {
+    background: #fff;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+
+.contact-item {
+    padding: 2em;
+}
+
+
+
+
+.box-model {
+    margin: 1rem;
+    padding: 1rem;
+    background: lightslategrey;
+ }
+
+ .box-model2 {
+    max-width: 100%;
+    margin: none;
+    color:blanchedalmond;
+    background-color: cornflowerblue;
+}
+/*.box-model3 {
+    max-width: 50%;
+    max-height: 10px 10px;
+    padding-top: 4em;
+    margin: none;
+    color: black;
+}*/
+
+.box-model4 {
+    max-width: 75%;
+    max-height: 20em;
+    border-radius: 100%;
+    margin: auto;
+    background-color: black;
+}
+
+/*______________________________________
+BLOG
+_____________________________________*/
+
+.blog-pic {
+    margin-left: 8em;
+}
+.blog-t {
+    margin-top: 2em;
+    margin-right: 2em;
+}
+.blog-t p {
+    font-weight: 500;
+    font-size: 1.5em;
+}
+.blog-t p span {
+    color: black;
+    font-size: .75em;
+    font-weight: 800;
+}
+
+
+
+
+
+
+/* _____________________________________
+
+   02. FAQs
+   _____________________________________ */
+
+   /* Dropdown Button */
+.dropbutton {
+    background-color: #4d4d4d;
+    width: 100%;
+    color: white;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    display: block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+   
+ /*.faq-items {
+    color: inherit;
+    margin-bottom: 1em;
+ }
+ */
+ 
+/*
+  
+  .faq-items a h2:hover {
+    display: black;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  }
+  .dropdown {
+    display: block;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+*/
+
+
+/*__________________________________
+ Contact Form
+ ___________________________________*/
+ .container {
+    border-radius: 5px;
+    background-color: #9dd0d1;
+    padding: 4em 4em 4em 4em;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  input[type=submit] {
+    background-color: #21759b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /*________________________________
+  Footer
+  _________________________________*/
+
+  .footer {
+    position: relative;
+    top: 0em;
+    background-color:#999999;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0px 5px 8px #888;
+}
+}
