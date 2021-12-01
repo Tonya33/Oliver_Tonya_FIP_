@@ -247,14 +247,13 @@ ______________________________*/
     }
 
     .logo img {
-        padding: 1em;
-        width: 100%;
+        width: 70%;
+        margin-left: 5em;
     }
     /*------Start Nav Styling ---------*/
 
     .nav {
         grid-column: 2 / span 3;
-        padding-top: 1.5em;
         margin: 0;
      }
     nav ul {
@@ -276,24 +275,19 @@ nav li:last-child{
 nav li a {
     color:#4d4d4d;
     font-size: 1em;
-    text-decoration: underline #4d4d4d;
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
+    text-decoration: none;
 }
 
 nav li a:hover {
-    border-bottom: 3px solid #ba9bc9;
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
+    border-bottom: 3px solid #4d4d4d;
+    padding-bottom:.4em;
     
 }
 
-/*nav li a.active {
+nav li a.active {
     padding-bottom: .5em;
     border-bottom: 3px solid #ba9bc9;
-} ------*/
+}
 
   /*-------- End Site header--------*/
   
