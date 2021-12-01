@@ -525,6 +525,12 @@ h3{
   Footer
   _________________________________*/
 
+  .social-links img {
+    width: 50px;
+    height: 50px;
+    
+}
+
   .footer {
     position: relative;
     top: 0em;
@@ -560,13 +566,9 @@ padding-bottom:.4em;
 
 }
 
-.footernav li a.active {
+.footer nav li a.active {
 padding-bottom: .5em;
 border-bottom: 3px solid #ba9bc9;
 }
-.social-links img {
-    width: 50px;
-    height: 50px;
-    
-}
+
 }
