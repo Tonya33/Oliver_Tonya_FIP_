@@ -524,57 +524,51 @@ h3{
   Footer
   _________________________________*/
 
-  .footer {
+.footer {
     position: relative;
     top: 0em;
     background-color:#999999;
     border-bottom: 1px solid #e6e6e6;
     box-shadow: 0px 5px 8px #888;
 }
-
-
-
 .social-links {
     display: grid;
-    grid-column: 2 / span 3;
+    grid-column: 2 / span 2;
     grid-template-columns: repeat(4,1fr);
     justify-content: space-evenly;
     margin: 2em 0 0 3em;
     padding-left: 25%;
-}
+    padding-top: 2em;
 }
 .social-links img {
     display: inline-flexbox;
     width: 75px;
     height: 75px;
 }
-.two-foot-items {
-    display: grid;
-    max-height: fit-content;
-    grid-column: 3 / span 2;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content:space-evenly;
- }
 
 .footer nav {
     grid-column: 4 / span 1;
     margin: 0;
-    padding: 0 3em 4em 0;
+    padding: 0 3em 0 0;
  }
+
 .footer nav ul {
-    margin: 0;
-    text-decoration: none;
-    text-align: end;
-    color: #4d4d4d;
-    font-size: 1.5em;
-    padding: 0;
-    padding-right: 3em;
-    display: inline-flexbox;
+margin: 0;
+text-decoration: none;
+text-align: end;
+color: #4d4d4d;
+font-size: 1.5em;
+padding: 0;
+padding-right: 3em;
+display: block;
 }
+
 .footer nav li {
 margin-right:1em;
-padding: .5em;
+padding: .6em;
+display: block;
 }
+
 .footer nav li a {
 color:#4d4d4d;
 font-size: 1em;
@@ -594,6 +588,11 @@ border-bottom: 3px solid #ba9bc9;
 .copyright {
     font-size: .7em;
     text-align: center;
+    padding-bottom: 2em;
+ }
+ .border-top {
+    border-top: 1px solid #ba9bc9;
+    padding-top: 1.5em;
  }
 
 }
