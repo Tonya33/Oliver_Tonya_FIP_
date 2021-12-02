@@ -4,104 +4,140 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c24f3474f.js" crossorigin="anonymous"></script>
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <title>RAW STONE</title>
 </head>
-<body>
-    <h1 class="">RAW STONE</h1>
-    <h1 class="hidden">Welcome to RAW STONE</h1>
-    <a class="hidden" href="#content">Skip to content</a>
-    <header>
-        <nav aria-label="Main Navigation">
+<body class="site">
+    <h1 class="hidden">RAW STONE Jewelry</h1>
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <header class="head">
+        <div class="logo">
+            <img class="logo img" src="images/logo.png" alt="Raw stone logo">
+        </div>
+        <nav class="nav" aria-label="Main Navigation">
             <h2 class="hidden">Main Navigation</h2>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Shop</li>
-                <li>Cart</li>
+                <li><a href="1-Home-Page.html">HOME</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a class="active" href="2-About-Page.html">ABOUT</a></li>
+                <li><a href="3-Product-Page.html">SHOP</a></li>
+                <li><a href="cart.html">CART</a></li>
              </ul>
         </nav>
     </header>
-    <main id="content">
-        <section>
-            <img style="float: left;" src="https://via.placeholder.com/720x400" alt="Image of me and my work space">
-            <h3>About the Artist</h3>
-            <p>
-                My name is Tonya! I am a spirital Mama who loves creating in so many ways!
-                I started my journey as a young, free-spirited bartender. After
-                becoming sober in December 2020, I decided to go back to school and
-                develop my skills as a difital artist, but my passion is everything occultic
-                See, Jewelry is just the start. I have become obsessed with the law of Attraction and energy frenquencies. RAW STONE is a way of
-                sharing my love of all things energetically pleasing. Join me on
-                this journey as I unfold the endless creative possibilty that the<br> 
-                sober world has to offer!
-
-
-            </p>
-            <img style="float: right;" src="https://via.placeholder.com/720x400" alt="Image of torch and quality assurance">
-            <h3>Quality Assurance</h3>
-            <p>
-                It is important to us that our customers know that our jewelry is 
-                constructed and crafted with absolute quality in mind! RAW STONE using
-                Stainless steel and 100% natural, semi-precious stones. We do not cheap out on the materials
-                We love creating everyday stone pieces that are beautiful yet sudble
-                We know that you want good jewelry that will last and we wont settle for less than what you deserve!
-            </p>
-        </section>
-        <section>
-            <h3 class="hidden">Return Policy</h3>
-            <img src="https://via.placeholder.com/1500X300" alt="Image of me in yoga pose">
-            <h3>Returns & Order tracking</h3>
-            <p>
-                RAW STONE has a 30-day money back policy on each item you buy<br>
-                We want our customer satisfied!<br>
-                Please email us if you are curious about the location of your purchase<br> or to ask more about our return policy
-
-            </p>
-        </section>
-        <section>
-            <h2>Let's Connect</h2>
-                <p>
-                    Do you have questions or an<br>
-                    idea for a collaboration?<br>
-                     I'd LOVE to hear from<br>
-                    you!<br>
-                    Leave a message & I will<br>
-                    get back to you shortly<br>
-                    ...
-                </p>
-            <h3 class="hidden">Contact Form</h3>
-                <form action="email.php" method="POST" enctype="text/plain">
-                    <input name="fullName" type="text" placeholder="Your Name"><br>
-                    <input name="contactInfo" type="text" placeholder="email" required><br>
-                    <textarea name="msg" placeholder="Enter your questions, comments or concerns here..."></textarea><br>
-                    <input name="submit" type="submit" value="Send">
-                </form>
-        </section>
-    </main>
-    <footer>
-            <h2 class="hidden">Footer</h2>
-            <h3 class="hidden">Links to social media</h3>
-                <span>Instagram icon</span>
-                <a href="#">Instagram</a><br>
-                    <span>Facebook icon</span>
-                    <a href="#">Facebook</a><br>
-                    <span>Twitter icon </span>
-                    <a href="#">Twitter</a>
-                <nav style="float: left;" aria-label="Footer Navigation">
-                    <h3 class="hidden">Footer Nav</h3>
-                        <ul>
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Shop</li>
-                            <li>Cart</li>
-                        </ul>
-                </nav>
-                    
-                    <p> 
-                        All prices on this website are based on time & quality at the time of publishing and are subject to change. Please email to review pricing, questions and return policy.  ©2013 Couples Resort Inc. All Rights Reserved. Privacy Policy
+    <main id="content" class="main">
+        <section class="about">
+            <div class="title border-bottom">
+                <h2>About RAWSTONE</h2>
+            </div>
+            <div class="two-items">
+                <div>
+                    <img src= "images/About_photo.jpg" alt="Image of me and my work space">
+                </div>
+                <div>
+                    <p>
+                        RAWSTONE creates pieces with mesmorizing semi-precious stones, thats are perfect for any occasion. Whether you're dressing down or dressing up, we have something for everyone's style. Our signature piece is the cluster necklace. Our styles is simple yet elegant and affordable. Why pay more for natural beauty?<br>
+                        Looking for the perfect gift?<br>
+                        RAWSTONE offers gift wrapping options! Please select "gift wrapping upon checkout and we will wrap it beautifully for you!"
                     </p>
                 </div>
-        </footer>
+            </div>
+        </section>
+        <section class="Quality">
+            <div class="title border-bottom">
+                <h2>Quality Assurance</h2>
+            </div>
+            <div class="two-items">
+                
+                <div>
+                    <p>
+                        RAWSTONE knows it is important that our clients recieve jewelry that is constructed and crafted with absolute quality in mind! RAW STONE uses Stainless Steel and 100% natural, semi-precious stones. We do not cheap out on the materials!
+                        We also take the time to close our jump hoops with heat, making sure your pieces never fail apart!<br>
+                        We love creating things that are beautiful yet sudble.. 
+                        We know that you want good jewelry that will last and we won't settle for less than what you deserve!
+                    </p>
+                </div>
+                <div>
+                    <img src= "images/quality_assurance.jpg" alt="Image of me and my work space">
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="title border-bottom">
+            <h2>Past Purchse Reviews</h2>
+            </div>
+            <div class="two-items margin-small-left">
+                <div>
+                    <img src="images/Brown_beaded_bracelet.jpg" alt="purchased beaded bracelet">
+                </div>
+                <div>
+                    <img src="images/necklace_close_up.jpg" alt="close up of necklace surronded by stones in holder">
+                </div>
+            </div>
+            <div class="two-items">
+                <div>
+                    <p> <span class="big-quote">"</span>I love my RAWSTONE bracelet! <br>It is super comfortable and well made!<span class="big-quote">"</span>
+
+                    </p>
+                </div>
+                <div>
+                    <p> <span class="big-quote">"</span>My RAWSTONE necklace is beautiful and timeless.<br> My husband has good taste!<span class="big-quote">"</span>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="title border-bottom">Contact Us</h2>
+            <h3 class="hidden">Contact Form</h3>
+            <div class=" container one-item">
+                <form action="email.php" method="POST" enctype="text/plain">
+                    <input name="fullName" type="text" placeholder="First & Last Name">
+                    <input name="contactInfo" type="text" placeholder="email" required>
+                    <textarea name="msg" placeholder="Enter your questions, comments or concerns here..."></textarea>
+                    <input name="submit" type="submit" value="Send">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h1 class="hidden">Footer</h1>
+        <h2 class="hidden">Links to social media</h2>
+        <div class="social-links">
+            <div>
+                    <a href="https://www.pinterest.ca/">
+                    <img src="images/pintrest.png"></a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/">
+                    <img src="images/facebook.png"></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/">
+                    <img src="images/instagram.png"></a>
+            </div>
+            <div>
+                    <nav class="nav" aria-label="Footer Navigation">
+                    <h2 class="hidden">Footer Navigation</h2>
+                    <ul>
+                        <li><a class="active" href="1-Home-Page.html">HOME</a></li>
+                        <li><a href="blog.html"></a>BLOG</li>
+                        <li><a href="2-About-Page.html"></a>ABOUT</li>
+                        <li><a href="3-Product-Page.html"></a>SHOP</li>
+                        <li><a href="cart.html"></a>CART</li>
+                     </ul>
+                    </nav>
+            </div>
+        </div>
+        <div class="copyright border-top one-item">
+            <p>
+                    All prices on this website are based on time & quality at the time of publishing and are subject to change. Please email to review pricing, questions and return policy.  ©2021 Rawstone Inc. All Rights Reserved. Privacy Policy
+            </p>
+        </div>
+    </footer>
 </body>
 </html>    

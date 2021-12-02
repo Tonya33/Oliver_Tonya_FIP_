@@ -4,78 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c24f3474f.js" crossorigin="anonymous"></script>
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RAW STONE</title>
 </head>
-<body>
-    <h1>RAW STONE</h1>
-    <h1 class="hidden">Welcome to RAW STONE</h1>
-    <a class="hidden" href="#content">Skip to content</a>
-    <header>
-        <nav aria-label="Main Navigation">
-        <h2 class="hidden">Main Navigation</h2>
+<body class="site">
+    <h1 class="hidden">RAW STONE Jewelry</h1>
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <header class="head">
+        <div class="logo">
+            <img class="logo img" src="images/logo.png" alt="Raw stone logo">
+        </div>
+        <nav class="nav" aria-label="Main Navigation">
+            <h2 class="hidden">Main Navigation</h2>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Shop</li>
-                <li>Cart</li>
+                <li><a href="1-Home-Page.html">HOME</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="2-About-Page.html">ABOUT</a></li>
+                <li><a class="active" href="3-Product-Page.html">SHOP</a></li>
+                <li><a href="cart.html">CART</a></li>
              </ul>
         </nav>
     </header>
     <main id="content">
-        <section>
+        <section class="necklaces">
             <h2 class="hidden">Raw Stone Product Gallery</h2>
-            <div class="normal-flow">
+            <div class="title border-bottom">
                 <h2>Necklaces</h2>
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
             </div>
-            <div class="normal-flow2">
-                <h2>Bracelets</h2>
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
+            <div class="four-items">
+                <div>
+                    <img src="images/bead_strand.jpg" alt="product pic for stand with pendant">
+                </div>
+                <div>
+                    <img src="images/rose_hearts_full.jpg" alt="full shot of heart choker">
+                </div>
+                <div>
+                    <img src="images/tigers_eye_cluster.jpg" alt="tiger eye cluster product shot">
+                </div>
+                <div>
+                    <img src="images/tigers_eye_cluster.jpg" alt="product shot turquiose cluster">
+                </div>
             </div>
-            <div class="normal-flow2">
-                <h2>Earrings</h2>
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
-                <img class="static" src="https://via.placeholder.com/250x250">
+            <section class="bracelets">
+                <div class="title border-bottom">
+                    <h2>Bracelets</h2>
+                </div>
+                <div class="three-items">
+                    <div>
+                        <img src="images/pink_charm.jpg" alt="product pic for stand with pendant">
+                    </div>
+                    <div>
+                        <img src="images/orange_charm.jpg" alt="full shot of heart choker">
+                    </div>
+                    <div>
+                        <img src="images/green_charm.jpg" alt="tiger eye cluster product shot">
+                    </div>
+                </div> 
+            </section>
+            <section class="earrings">
+                <div class="title border-bottom">
+                    <h2>Earrings</h2>
+                </div>
+                <div class="three-items">
+                    <div>
+                        <img src="images/amthyst_earrings.jpg" alt="full shot of heart choker">
+                    </div>
+                    <div>
+                        <img src="images/amthyst_earrings.jpg" alt="tiger eye cluster product shot">
+                    </div>
+                    <div>
+                        <img src="images/amthyst_earrings.jpg" alt="product shot turquiose cluster">
+                    </div>
+                </div>
+            </section>
+            <section>
+            <h2 class="title border-bottom">Contact Us</h2>
+            <h3 class="hidden">Contact Form</h3>
+            <div class=" container one-item">
+                <form action="email.php" method="POST" enctype="text/plain">
+                    <input name="fullName" type="text" placeholder="First & Last Name">
+                    <input name="contactInfo" type="text" placeholder="email" required>
+                    <textarea name="msg" placeholder="Enter your questions, comments or concerns here..."></textarea>
+                    <input name="submit" type="submit" value="Send">
+                </form>
             </div>
         </section>
     </main>
-    <footer>
-        <section>
-            <h2 class="hidden">Footer</h2>
-            <h3 class="hidden">Links to social media</h3>
-                <span>Instagram icon</span>
-                <a href="#">Instagram</a>
-                <span>Facebook icon</span>
-                <a href="#">Facebook</a>
-                <span>Twitter icon </span>
-                <a href="#">Twitter</a>
-            <nav aria-label="Footer Navigation">
-                <h3 class="hidden">Footer Nav</h3>
-                        <ul>
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Shop</li>
-                            <li>Cart</li>
-                        </ul>
-            </nav>
-                <p>
-                All prices on this website are based on time & quality at the time of publishing and are subject to change. Please email to review pricing, questions and return policy.  ©2013 Couples Resort Inc. All Rights Reserved. Privacy Policy
-                </p>
-        </section>
+    <footer class="footer">
+        <h1 class="hidden">Footer</h1>
+        <h2 class="hidden">Links to social media</h2>
+        <div class="social-links">
+            <div>
+                    <a href="https://www.pinterest.ca/">
+                    <img src="images/pintrest.png"></a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/">
+                    <img src="images/facebook.png"></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/">
+                    <img src="images/instagram.png"></a>
+            </div>
+            <div>
+                    <nav class="nav" aria-label="Footer Navigation">
+                    <h2 class="hidden">Footer Navigation</h2>
+                    <ul>
+                        <li><a class="active" href="1-Home-Page.html">HOME</a></li>
+                        <li><a href="blog.html"></a>BLOG</li>
+                        <li><a href="2-About-Page.html"></a>ABOUT</li>
+                        <li><a href="3-Product-Page.html"></a>SHOP</li>
+                        <li><a href="cart.html"></a>CART</li>
+                     </ul>
+                    </nav>
+            </div>
+        </div>
+        <div class="copyright border-top one-item">
+            <p>
+                    All prices on this website are based on time & quality at the time of publishing and are subject to change. Please email to review pricing, questions and return policy.  ©2021 Rawstone Inc. All Rights Reserved. Privacy Policy
+            </p>
+        </div>
     </footer>
 </body>
 </html>
