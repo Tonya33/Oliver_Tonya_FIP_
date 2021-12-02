@@ -136,6 +136,10 @@ Global
      .margin-top {
         margin-bottom: 5em;
      }
+     .margin-small-left {
+         margin-left: 6em;
+
+     }
 
 
     /*------------End Floats -----------*/
@@ -595,4 +599,48 @@ border-bottom: 3px solid #ba9bc9;
     padding-top: 1.5em;
  }
 
+}
+/*___________________________________________
+
+ABOUT PAGE START
+__________________________________________*/
+
+/*----------About start-----------*/
+.about img {
+    width: 445px;
+    height: 320px;
+}
+.about p {
+    font-size: 1.5em;
+}
+/*--------About End------*/
+/*------Quality Start-----*/
+.Quality p {
+    font-size: 1.5em;
+
+}
+/*------Quality End----*/
+/*------Reviews Start-------*/
+
+.reviews img{
+    border-radius: 120px;
+}
+.reviews p{
+    font-size: 1.5em;
+    text-align: center;
+}
+.big-quote {
+    font-size: 3em;
+
+}
+/*------Reviews End--------*/
+
+/*_________________________________________
+
+ PRODUCT PAGE START
+
+ _____________________________________*/
+.necklaces .four-items img{
+    height: 280px;
+    width: 260;
 }
