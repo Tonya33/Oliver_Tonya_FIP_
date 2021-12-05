@@ -3,7 +3,7 @@ Style Name: HTML Atributes & Forms
 Description: Class File
 Author: Tonya Oliver 
 Version: 1.0
-Tags: Learning HTML
+Tags: Final Project
 */
 
 /*--------------------------------------------------------------
@@ -51,15 +51,30 @@ ___________________________________________ */
          - General
          - Floats
          - Brand Colors
+         - Title styles
          - Font Awesome                       
    02. CSS Grid
+        - Grid items
    03. Site Header
-       - Header
-       - Nav
+       - Logo
+       - Nav styling
    04. Hero
-       - Image
-       - Title
-   05. Floats                       
+   05. Blog
+   06. FAQ
+        - Dropdown &content
+   07. Contact Form
+   08. About Page
+        - About section
+        - Quality section
+        - Reviews   
+   09. Product Page
+        - Product img    
+        - Product btn
+        - Product btn edit
+   10. Footer
+        - Social links
+        - Footer Nav
+        -Copyright                
 /* _____________________________________ */
 
 
@@ -99,51 +114,29 @@ Global
         width: 100%;
     }
 
-    .margin-top {
-        margin-top: 1em;
+    .border{
+        border: 3px solid #ba9bc9;
     }
-
-    .margin-toptb {
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-
-    .title {
-            display: grid;
-            grid-column: 1 / span 4;
-            grid-template-columns: 1fr;
-            margin-top: 2em;
-         }
 
     /*---------------End General --------*/
 
-    /*------------- Floats -------------*/
-
-    .f-left {
-        float: left;
-     }
-    
-     .f-right {
-         float: right;
-     }
+    /*------------- start Floats -------------*/
   
      .margin-left {
         margin-left: 17em;
      }
-     .margin-right {
+     /*.margin-right {
          margin-right: 3em;
      }
      .margin-top {
         margin-bottom: 5em;
-     }
+     }*/
      .margin-small-left {
          margin-left: 6em;
 
      }
-
-
     /*------------End Floats -----------*/
-    /*----------- Brand Colours -------*/
+    /*----------- Brand Colours start -------*/
 
     .rs-blue {
         color: #9dd0d1;
@@ -155,9 +148,39 @@ Global
         color: #808080;
     }
 
-    /*------------End Brand Colours-----*/
+    /*------------ End Brand Colours-----*/
+    /*-------- Start Title Styles---------*/
 
-    /*--------- Font Awesome ---------*/
+h2 {
+    background: #fff;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    font-size: 2em;
+    font-weight: 400;
+}
+h3{
+    font-size: 4em
+}
+
+.title {
+    display: grid;
+    grid-column: 1 / span 4;
+    grid-template-columns: 1fr;
+    margin-top: 2em;
+ }
+    /*-------- End Title Styles---------*/
+
+    /*--------- start Font Awesome ---------*/
+
+    .rawstone {
+        color: #ba9bc9;
+        font-size: 1.3em;
+    }
+    .bold{
+        font-weight: 700;
+    }
+    /*--------- End Font Awesome ---------*/
 
 /*______________________________
 
@@ -171,23 +194,14 @@ ______________________________*/
          max-width: none;
     }
 
-    /*------Grid Items---------------*/
+    /*------ start Grid Items---------------*/
     
     .head, .main > *, .foot > *{
         display: grid;
         grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
    }
 
-  /* .one-item {
-    display: inline-block;
-    
- }*/
- /*.one-item {
-    display: inline-block;
-    max-height: fit-content;
-    grid-column: 4 / span 1;
-    grid-template-columns: 1fr;
-    margin-left: ;*/
+
     .one-item {
         display: grid;
         grid-column: 2 / span 2;
@@ -204,31 +218,22 @@ ______________________________*/
     padding-bottom: 2em;
  }
 
- .three-items {
+    .three-items {
     display: grid;
-    grid-column: 2 / span 2;
+    grid-column: 1 / span 4;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
-    row-gap: 2em;
-    column-gap: 2em;
+    margin-left: 3em;
  }
  
 
- .four-items {
+    .four-items {
     display: grid;
     grid-column: 1 / span 4;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-evenly;
     margin-left: 4em;
  }
-
- .contact-override {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
-    grid-column: 1/ span 4;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ccc;
-}
 
     /*--------end grid items---------*/
 
@@ -244,6 +249,7 @@ ______________________________*/
         border-bottom: 1px solid #e6e6e6;
         box-shadow: 0px 5px 8px #888;
     }
+    /*-----Start Logo----------*/
 
     .logo {
         grid-column: 1 / span 1;
@@ -253,6 +259,7 @@ ______________________________*/
         width: 70%;
         margin-left: 5em;
     }
+    /*-----End Logo----------*/
     /*------Start Nav Styling ---------*/
 
     .nav {
@@ -268,31 +275,37 @@ ______________________________*/
         font-size: 1.5em;
     }
 
-nav li {
+    nav li {
     display: inline;
     margin-right: 4em;
 }
-nav li:last-child{
+    nav li:last-child{
     margin-right: 0em;
 }
-nav li a {
+    nav li a {
     color:#4d4d4d;
     font-size: 1em;
     text-decoration: none;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
 }
 
-nav li a:hover {
+    nav li a:hover {
     border-bottom: 3px solid #ba9bc9;
     padding-bottom:.4em;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
     
 }
 
-nav li a.active {
+    nav li a.active {
     padding-bottom: .5em;
     border-bottom: 3px solid #ba9bc9;
 }
 
-  /*-------- End Site header--------*/
+  /*-------- End nav styling--------*/
   
 /*_________________________________
 
@@ -319,52 +332,6 @@ __________________________________*/
     grid-column: 1;
     grid-row: 1;
  }
- 
-    /*--------Title Styles---------*/
-
-h2 {
-    background: #fff;
-    padding-top: 2em;
-    padding-bottom: 1em;
-    padding-left: 1em;
-    font-size: 2em;
-    font-weight: 400;
-}
-
-
-.contact-item {
-    padding: 2em;
-}
-
-
-
-
-/*.box-model {
-    margin-left: 8em;
-    padding: 1em;
- }
-
- .box-model2 {
-    max-width: 100%;
-    margin: none;
-    color:blanchedalmond;
-    background-color: cornflowerblue;
-}
-.box-model3 {
-    max-width: 50%;
-    max-height: 10px 10px;
-    padding-top: 4em;
-    margin: none;
-    color: black;
-}*/
-
-.box-model4 {
-    max-width: 75%;
-    max-height: 20em;
-    border-radius: 100%;
-    margin: auto;
-    background-color: black;
-}
 
 /*______________________________________
 BLOG
@@ -386,13 +353,6 @@ _____________________________________*/
     font-size: .75em;
     font-weight: 800;
 }
-h3{
-    font-size: 4em
-}
-
-
-
-
 
 
 /* _____________________________________
@@ -400,7 +360,8 @@ h3{
    02. FAQs
    _____________________________________ */
 
-   /* Dropdown Button */
+/*----------Start dropdown & content-----------*/
+
 .dropbtn {
     background-color: #4d4d4d;
     width: 100%;
@@ -417,12 +378,10 @@ h3{
     transition: background-color 500ms linear;
   }
   
-  /* The container <div> - needed to position the dropdown content */
   .dropdown {
     display: inline-block;
   }
   
-  /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -433,7 +392,6 @@ h3{
     z-index: 1;
   }
   
-  /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -441,7 +399,6 @@ h3{
     display: block;
   }
   
-  /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
     background-color: #ba9bc9;
     -webkit-transition: background-color 500ms linear;
@@ -449,7 +406,6 @@ h3{
     transition: background-color 500ms linear;
 }
   
-  /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: block;
     -webkit-transition: background-color 500ms linear;
@@ -457,44 +413,14 @@ h3{
     transition: background-color 500ms linear;
 }
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
     background-color: #ba9bc9;
     -webkit-transition: background-color 500ms linear;
     -ms-transition: background-color 500ms linear;
     transition: background-color 500ms linear;
 }
-
-   
- /*.faq-items {
-    color: inherit;
-    margin-bottom: 1em;
- }
- */
- 
-/*
-  
-  .faq-items a h2:hover {
-    display: black;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
-  }
-  .dropdown {
-    display: block;
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
-}
-*/
-
-
+/*----------End dropdown & content-----------*/
+    
 /*__________________________________
  Contact Form
  ___________________________________*/
@@ -506,14 +432,14 @@ h3{
     margin-right: 25%;
   }
   input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
   }
   input[type=submit] {
     background-color: #21759b;
@@ -523,89 +449,12 @@ h3{
     border-radius: 4px;
     cursor: pointer;
   }
+  /*___________________________________________
 
-  /*________________________________
-  Footer
-  _________________________________*/
-
-.footer {
-    position: relative;
-    top: 0em;
-    background-color:#999999;
-    border-bottom: 1px solid #e6e6e6;
-    box-shadow: 0px 5px 8px #888;
-}
-.social-links {
-    display: grid;
-    grid-column: 2 / span 2;
-    grid-template-columns: repeat(4,1fr);
-    justify-content: space-evenly;
-    margin: 2em 0 0 3em;
-    padding-left: 25%;
-    padding-top: 2em;
-}
-.social-links img {
-    display: inline-flexbox;
-    width: 75px;
-    height: 75px;
-}
-
-.footer nav {
-    grid-column: 4 / span 1;
-    margin: 0;
-    padding: 0 3em 0 0;
- }
-
-.footer nav ul {
-margin: 0;
-text-decoration: none;
-text-align: end;
-color: #4d4d4d;
-font-size: 1.5em;
-padding: 0;
-padding-right: 3em;
-display: block;
-}
-
-.footer nav li {
-margin-right:1em;
-padding: .6em;
-display: block;
-}
-
-.footer nav li a {
-color:#4d4d4d;
-font-size: 1em;
-text-decoration: none;
-}
-
-.footer nav li a:hover {
-border-bottom: 3px solid #ba9bc9;
-padding-bottom:.4em;
-
-}
-
-.footer nav li a.active {
-padding-bottom: .5em;
-border-bottom: 3px solid #ba9bc9;
-}
-.copyright {
-    font-size: .7em;
-    text-align: center;
-    padding-bottom: 2em;
- }
- .border-top {
-    border-top: 1px solid #ba9bc9;
-    padding-top: 1.5em;
- }
-
-}
-/*___________________________________________
-
-ABOUT PAGE START
+ABOUT PAGE
 __________________________________________*/
 
-/*----------About start-----------*/
+/*----------About section start-----------*/
 .about img {
     width: 445px;
     height: 320px;
@@ -613,14 +462,14 @@ __________________________________________*/
 .about p {
     font-size: 1.5em;
 }
-/*--------About End------*/
-/*------Quality Start-----*/
+/*--------About section End------*/
+/*------Quality section Start-----*/
 .Quality p {
     font-size: 1.5em;
 
 }
-/*------Quality End----*/
-/*------Reviews Start-------*/
+/*------Quality section End----*/
+/*------Reviews section Start-------*/
 
 .reviews img{
     border-radius: 120px;
@@ -633,14 +482,156 @@ __________________________________________*/
     font-size: 3em;
 
 }
-/*------Reviews End--------*/
+/*------Reviews section End--------*/
 
 /*_________________________________________
 
  PRODUCT PAGE START
 
  _____________________________________*/
-.necklaces .four-items img{
-    height: 280px;
-    width: 260;
+ /*--------Product Img start---------*/
+
+ .necklaces img{
+    border: 3px solid #ba9bc9;
 }
+.bracelets img{
+   border: 3px solid #ba9bc9;
+}
+.earrings img{
+   border: 3px solid #ba9bc9;
+}
+/*---------Product Img End---------*/
+/*--------Product btn start--------*/
+.product-img button {
+   border: none;
+   background: #3a7999;
+   color: #f2f2f2;
+   padding: 10px;
+   margin-left: 7em;
+   font-size: 18px;
+   border-radius: 5px;
+   position: static;
+   box-sizing: border-box;
+   transition: all 500ms ease;
+}
+.product-img button:before {
+   content:'';
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 0px;
+   height: 42px;
+   background: rgba(255,255,255,0.3);
+   border-radius: 5px;
+   transition: all 2s ease;
+}
+.product-img button:hover:before {
+   width: 100%;
+}
+/*--------Product btn end--------*/
+/*--------Product btn edit start--------*/
+.four-items .product-img button{
+    margin-right: 1em;
+    margin-left: 3em;
+}
+.bracelets .three-items .product-img button{
+margin-left: 9em;
+}
+/*--------Product btn edit end--------*/
+
+  /*________________________________
+  Footer
+  _________________________________*/
+
+.footer {
+    position: relative;
+    top: 0em;
+    background-color:#999999;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0px 5px 8px #888;
+}
+/*----------Start social links------*/
+.social-links {
+    display: grid;
+    grid-column: 1 / span 2;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-evenly;
+    margin: 2em 0 0 3em;
+    padding-left: 25%;
+    padding-top: 2em;
+}
+.social-links img {
+    display: inline-flexbox;
+    width: 75px;
+    height: 75px;
+}
+/*----------End social links------*/
+/*---------Start Footer nav-------*/
+
+.footer nav {
+    grid-column: 1 / span 4;
+    margin: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+ }
+
+.footer nav ul {
+margin: 0;
+text-decoration: none;
+text-align: end;
+color: #4d4d4d;
+font-size: 1.5em;
+padding: 0;
+}
+
+.footer nav li {
+margin-right:1em;
+padding: .6em;
+display: inline;
+}
+}
+.footer nav li:last-child{
+    margin: 0;
+}
+
+.footer nav li a {
+color:#4d4d4d;
+font-size: 1em;
+text-decoration: none;
+-webkit-transition: background-color 500ms linear;
+-ms-transition: background-color 500ms linear;
+transition: background-color 500ms linear;
+}
+}
+
+
+.footer nav li a:hover {
+border-bottom: 3px solid #ba9bc9;
+padding-bottom:.4em;
+-webkit-transition: background-color 500ms linear;
+-ms-transition: background-color 500ms linear;
+transition: background-color 500ms linear;
+}
+
+
+.footer nav li a.active {
+padding-bottom: .5em;
+border-bottom: 3px solid #ba9bc9;
+}
+/*---------End Footer nav-------*/
+/*---------Start copyright-------*/
+
+.copyright {
+    font-size: .7em;
+    text-align: center;
+    padding-bottom: 2em;
+ }
+ .border-top {
+    border-top: 1px solid #ba9bc9;
+    padding-top: 1.5em;
+ }
+ /*---------End copyright-------*/
+
+}
+
+
